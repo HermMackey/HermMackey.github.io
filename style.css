@@ -86,3 +86,6 @@ h2, h3 {
     text-decoration: none;
     color: #ff0000;
 }
+#bouncing box {
+ background-image: url("paper.gif"); 
+}
