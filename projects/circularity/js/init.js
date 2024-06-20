@@ -18,6 +18,7 @@ var init = function (window) {
     // TODO 1 : Declare and initialize our variables
     var circle;
     var circles;
+    var rightEdge = circle.x + circle.radius;
     // TODO 2 : Create a function that draws a circle
     function drawCircle() {}
     circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
@@ -26,11 +27,15 @@ var init = function (window) {
     circles.push(circle);
     // TODO 3 / 7 : Call the drawCircle() function
     /* Your Function Calls HERE */
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
+    for (var drawCircle = 0; drawCircle < 100; drawCircle++) {
+
+
+    }
+
+
+
+
+
     ////////////////////////////////////////////////////////////
     ///////////////// PROGRAM LOGIC ////////////////////////////
     ////////////////////////////////////////////////////////////
