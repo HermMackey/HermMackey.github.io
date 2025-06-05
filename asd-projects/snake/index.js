@@ -88,7 +88,13 @@ function checkForNewDirection(event) {
 
   if (activeKey === KEY.LEFT) {
     snake.head.direction = "left";
-  }
+  } else if (activeKey === KEY.LEFT) {
+  snake.head.direction = "right";
+} else if (activeKey === KEY.LEFT) {
+  snake.head.direction = "up";
+} else if (activeKey === KEY.LEFT) {
+  snake.head.direction = "down";
+}
 
   // FILL IN THE REST
 
@@ -96,25 +102,30 @@ function checkForNewDirection(event) {
 }
 
 function moveSnake() {
-  /* 
-  TODO 11: Move each part of the snake's body such that it's body follows the head.
+   
+  // TODO 11: Move each part of the snake's body such that it's body follows the head.
   
-  HINT: To complete this TODO we must figure out the next direction, row, and 
-  column for each snakeSquare in the snake's body. The parts of the snake are 
-  stored in the Array snake.body and each part knows knows its current 
-  column/row properties. 
+  // HINT: To complete this TODO we must figure out the next direction, row, and 
+  // column for each snakeSquare in the snake's body. The parts of the snake are 
+  // stored in the Array snake.body and each part knows knows its current 
+  // column/row properties. 
   
-  */
+  
 
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
 
-  /* 
-  TODO 7: determine the next row and column for the snake's head
-  
-  HINT: The snake's head will need to move forward 1 square based on the value
-  of snake.head.direction which may be one of "left", "right", "up", or "down"
-  */
+   
+  // TODO 7: determine the next row and column for the snake's head
+  if (snake.head.direction === "left") {
+  snake.head.column = snake.head.column - 1;
+} else if (snake.head.direction === "right") {
+  snake.head.column = snake.head.column + 1;
+} repositionSquare(snake.head);
+
+  // HINT: The snake's head will need to move forward 1 square based on the value
+  // of snake.head.direction which may be one of "left", "right", "up", or "down"
+  // */
 }
 
 function hasHitWall() {
